@@ -39,5 +39,8 @@
 #  ...
 #  2014-09-01,A,3,100.4
 #
-#  >>> Escriba su codigo a partir de este punto <<<
-#
+#!/bin/bash
+
+sed -E 's#([0-9]{2})/([0-9]{2})/([0-9]{2})#\3-\2-\1#g' "$1" > output.csv
+cat output.csv
+
